@@ -1,6 +1,16 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 # Weak2
-本周主要介绍了神经网络中forward和backward的一般实现和向量实现。一般实现较为简单，向量实现中存在一些疑点
-$ \boldsymbol{X} $ 是一个由训练集组成的矩阵，每一列代表一个数据，列数为数据的大小
+本周主要介绍了神经网络中forward和backward的一般实现和向量实现。一般实现较为简单，向量实现中存在一些疑点$\boldsymbol{X}$是一个由训练集组成的矩阵，每一列代表一个数据，列数为数据的大小
 $ \boldsymbol{\omega}$ 是训练参数，大小与 $\boldsymbol{X}$一列的大小一致
 $b$ 为偏差(bias)，为一个标量
 ## forward
@@ -8,9 +18,9 @@ $\boldsymbol{Z} = np.dot(\boldsymbol{\omega}.T,\;\boldsymbol{X}) + b$
 $\boldsymbol{A} = \sigma(\boldsymbol{Z})$，其中 $\sigma(\boldsymbol{x}) = \frac{1}{1-e^{-\boldsymbol{x}}}$
 通过编程实现为 $1/(1-np.exp(-\boldsymbol{X}))$
 Cost Function(Loss Function)通过矩阵实现时应该注意Cost Function是将所有的预测误差相加取平均得到的，**不可以直接用矩阵乘法使其变为标量**
-\begin{align}
- L = 1/m*np.sum((-\boldsymbol{Y}*np.log(\boldsymbol{A})+(1-\boldsymbol{Y})*np.log(1-\boldsymbol{A})))
-\end{align}，其中m为样本的个数
+
+$$ L = 1/m*np.sum((-\boldsymbol{Y}*np.log(\boldsymbol{A})+(1-\boldsymbol{Y})*np.log(1-\boldsymbol{A})))$$
+，其中m为样本的个数
 ## backward
 backward实际上是一个链式求导的过程，backward最根本的式子是通过梯度下降法来更新w和b
 \begin{align}
