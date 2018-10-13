@@ -3,7 +3,7 @@ markdown: kramdown
 title: 夜夜
 SEOTitle: 夜夜的博客 
 header-img: img/post-bg-desk.jpg
-email: 1540342095@gmail.com
+email: 1540342095@qq.com
 description: "Every failure is leading towards success."
 keyword: "python, Java, Deaplearning, Machine Learning"
 url: "http://jiangce0810.github.io"          # your host, for absolute URL
@@ -21,7 +21,7 @@ sidebar-avatar: /img/51416938_p7_master1200.jpg      # use absolute URL, seeing 
 RSS: false
 # weibo_username:     qiubaiying
 github_username:    jiangce0810
-csdn_username:   qq_33669204
+CSDN_username:   qq_33669204
 #twitter_username:   qiubaiying
 
 
