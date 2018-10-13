@@ -1,6 +1,8 @@
 # Weak2
 本周主要介绍了神经网络中forward和backward的一般实现和向量实现。一般实现较为简单，向量实现中存在一些疑点
-$ \boldsymbol{X} $ 是一个由训练集组成的矩阵，每一列代表一个数据，列数为数据的大小
+\begin{align}
+\boldsymbol{X}
+\end{align}是一个由训练集组成的矩阵，每一列代表一个数据，列数为数据的大小
 $ \boldsymbol{\omega}$ 是训练参数，大小与 $\boldsymbol{X}$一列的大小一致
 $b$ 为偏差(bias)，为一个标量
 ## forward
