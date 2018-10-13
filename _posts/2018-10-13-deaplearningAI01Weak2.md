@@ -18,9 +18,8 @@ $\boldsymbol{Z} = np.dot(\boldsymbol{\omega}.T,\;\boldsymbol{X}) + b$
 $\boldsymbol{A} = \sigma(\boldsymbol{Z})$，其中 $\sigma(\boldsymbol{x}) = \frac{1}{1-e^{-\boldsymbol{x}}}$
 通过编程实现为 $1/(1-np.exp(-\boldsymbol{X}))$
 Cost Function(Loss Function)通过矩阵实现时应该注意Cost Function是将所有的预测误差相加取平均得到的，**不可以直接用矩阵乘法使其变为标量**
-\begin{align}
- L = 1/m*np.sum((-\boldsymbol{Y}*np.log(\boldsymbol{A})+(1-\boldsymbol{Y})*np.log(1-\boldsymbol{A})))
-\end{align}
+
+$$ L = 1/m*np.sum((-\boldsymbol{Y}*np.log(\boldsymbol{A})+(1-\boldsymbol{Y})*np.log(1-\boldsymbol{A})))$$
 ，其中m为样本的个数
 ## backward
 backward实际上是一个链式求导的过程，backward最根本的式子是通过梯度下降法来更新w和b
